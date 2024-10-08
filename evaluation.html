@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DermiQ - Evaluate Your Skin</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+            </ul>
+            <h1 class="logo">DermiQ</h1>
+        </nav>
+    </header>
+    
+    <section class="evaluation">
+        <h2>Let's evaluate your skin !!</h2>
+        <!-- Removed action and method from the form -->
+        <form enctype="multipart/form-data">
+            <input type="file" name="skinImage" accept="image/*" required>
+            <!-- Button will now trigger the redirect function on click -->
+            <button type="button"><a href="dermiq.html">EXAMINE</button></a>
+        </form>
+        <!-- Dos and Don'ts Section -->
+        <div class="dos-donts">
+            <div class="dos">
+                <h2>Dos</h2>
+                <ul>
+                    <li>Start with a Good Cleanser</li>
+                    <li>Invest in Quality Products</li>
+                    <li>Double Cleanse at night</li>
+                    <li>Consult your dermatologist</li>
+                    <li>Give your skin enough time</li>
+                </ul>
+            </div>
+            <div class="donts">
+                <h2>Don'ts</h2>
+                <ul>
+                    <li>Forget SPF</li>
+                    <li>Exfoliate every day</li>
+                    <li>Touch your face</li>
+                    <li>Excessively wash your face</li>
+                    <li>Expect results overnight</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

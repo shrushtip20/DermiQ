@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DermiQ - Log In</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="signup.html">Sign Up</a></li>
+                <li><a href="about.html">About Me</a></li>
+            </ul>
+            <h1 class="logo">DermiQ</h1>
+        </nav>
+    </header>
+    
+    <section class="form-section">
+        <h2>Log In</h2>
+        <form id="login-form" onsubmit="return handleLogin(event);">
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit">Log In</button>
+        </form>
+        <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+    </section>
+
+    <script src="script.js"></script>
+    <script>
+        function handleLogin(event) {
+            event.preventDefault(); // Prevent form submission
+            const form = event.target;
+            const email = form.email.value;
+            const password = form.password.value;
+
+            loginUser(email, password); // Call the function to log in user
+            form.reset(); // Reset the form after submission
+        }
+    </script>
+</body>
+</html>

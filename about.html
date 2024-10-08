@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - DermiQ</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background-color: #3b1314;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        h1.logo {
+            color: white;
+            font-size: 32px;
+            margin-top: 10px;
+        }
+
+        /* About Section Styling */
+        .about-section {
+            padding: 50px;
+            background-color: #efded6;
+            text-align: center;
+        }
+
+        .about-section h2 {
+            color: #5b2c27;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .about-section p {
+            color: #4b3833;
+            font-size: 18px;
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+
+        .team-section {
+            background-color: #f5e0d6;
+            padding: 50px;
+            text-align: center;
+        }
+
+        .team-section h2 {
+            color: #5b2c27;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .team-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .team-member {
+            width: 30%;
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #efded6;
+            border-radius: 10px;
+        }
+
+        .team-member img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+
+        .team-member h3 {
+            color: #5b2c27;
+            margin-bottom: 10px;
+        }
+
+        .team-member p {
+            color: #4b3833;
+            font-size: 16px;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .team-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .team-member {
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+            <h1 class="logo">DermiQ</h1>
+        </nav>
+    </header>
+
+    <section class="about-section">
+        <h2>About DermiQ</h2>
+        <p>Welcome to DermiQ, your trusted partner in personalized skin care evaluation and recommendations. We understand that every skin type is unique, and our goal is to provide you with accurate insights into your skin's health. By analyzing skin conditions , we aim to empower you with knowledge and guide you towards better skincare solutions.</p>
+    </section>
+
+    <section class="team-section">
+        <h2>Meet Our Team</h2>
+        <div class="team-container">
+            <div class="team-member">
+                <img src="shrush.png" alt="Founder Image"> <!-- Replace with actual image -->
+                <h3>Shrushti Patil</h3>
+                
+            </div>
+            <div class="team-member">
+                <img src="tanmay.png" alt="Designer Image"> <!-- Replace with actual image -->
+                <h3>Tanmay Patil</h3>
+                
+            </div>
+            <div class="team-member">
+                <img src="muskan.png" alt="Dermatologist Image"> <!-- Replace with actual image -->
+                <h3>Muskan Singh</h3>
+                
+            </div>
+            <div class="team-member">
+                <img src="miheet.png" alt="Dermatologist Image"> <!-- Replace with actual image -->
+                <h3>Miheet Shah</h3>
+                
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

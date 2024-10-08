@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DermiQ - User Questionnaire</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+            </ul>
+            <h1 class="logo">DermiQ</h1>
+        </nav>
+    </header>
+
+    <section class="form-section">
+        <h2>User Information Questionnaire</h2>
+        <form id="questionnaire">
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="">Select</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required min="1" max="120">
+
+            <label for="allergy">Do you have any allergies?</label>
+            <input type="text" id="allergy" name="allergy" placeholder="e.g., Peanuts, Dust, etc.">
+
+            <label for="skin-type">Skin Type:</label>
+            <select id="skin-type" name="skinType" required>
+                <option value="">Select</option>
+                <option value="oily">Oily</option>
+                <option value="dry">Dry</option>
+                <option value="normal">Normal</option>
+                <option value="combination">Combination</option>
+            </select>
+
+            <button type="button" onclick="submitForm()">Identify</button>
+        </form>
+    </section>
+
+    <script>
+        // Function to handle form submission and data storage
+        function submitForm() {
+            // Store form data in Session Storage
+            sessionStorage.setItem('gender', document.getElementById('gender').value);
+            sessionStorage.setItem('age', document.getElementById('age').value);
+            sessionStorage.setItem('allergy', document.getElementById('allergy').value);
+            sessionStorage.setItem('skinType', document.getElementById('skin-type').value);
+
+            // Redirect to the evaluation page
+            window.location.href = 'evaluation.html';
+        }
+
+        // Autofill the form fields from Session Storage on page load
+        window.onload = function() {
+            const gender = sessionStorage.getItem('gender');
+            const age = sessionStorage.getItem('age');
+            const allergy = sessionStorage.getItem('allergy');
+            const skinType = sessionStorage.getItem('skinType');
+
+            if (gender) document.getElementById('gender').value = gender;
+            if (age) document.getElementById('age').value = age;
+            if (allergy) document.getElementById('allergy').value = allergy;
+            if (skinType) document.getElementById('skin-type').value = skinType;
+        };
+    </script>
+</body>
+</html>
